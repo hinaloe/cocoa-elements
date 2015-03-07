@@ -1,0 +1,16 @@
+{
+  "name": "cocoa-elements",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hinaloe/cocoa-elements",
+  "authors": [
+    "hinaloe <hina@hinaloe.net>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
