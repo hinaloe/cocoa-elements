@@ -1,0 +1,38 @@
+:host{
+  margin-left:60px;
+  margin-right: 60px;
+  border-radius: 5px;
+  display:block;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37)  ;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37)  ;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  background-color: #fff;
+  max-width: 720px;
+}
+
+.avatar{
+  width:64px;
+  height:64px;
+  padding: 10px 10px 10px 0;
+
+}
+
+a {
+  color: #03BDB6;
+  text-decoration: none;
+}
+
+@media (min-width:960px){
+  :host{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 640px) {
+  :host {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

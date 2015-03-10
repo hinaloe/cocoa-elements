@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+
+<polymer-element name="cocoa-card">
+  <template>
+    <link rel="stylesheet" href="cocoa-card.css">
+      <paper-ripple fit ></paper-ripple>
+    <div layout horizontal center>
+      <div>
+        <img src="{{avatar}}" alt="" class="avatar">
+      </div>
+      <div flex>
+        <h2><a href="{{url}}">{{name}}</a><template if={{author}}> by {{author}}</template></h2>
+        <template if="{{about}}"><p>{{about}}</p></template>
+
+      </div>
+    </div>
+
+  </template>
+  <script>
+  Polymer({
+    publish: {
+      avatar:"https://cdn.rawgit.com/docker/docs-base/master/theme/mkdocs/img/icons/icon-trusted-repository.svg",
+      name:null,
+      url:null,
+      author:null,
+      about:null
+
+    }
+
+  });
+  </script>
+</polymer-element>
