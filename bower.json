@@ -5,6 +5,7 @@
   "authors": [
     "hinaloe <hina@hinaloe.net>"
   ],
+  "main": "cocoa-elements.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
