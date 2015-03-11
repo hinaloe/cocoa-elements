@@ -1,0 +1,9 @@
+- name: リポ名
+  url: https://github.com/foo/bar
+  about: がいよう！
+  detail: App detail!
+  repo: https://github.com/foo/bar.git
+  author: Example.com
+  avatar: http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y
+- name: にけつっ！
+- author: 香風智乃

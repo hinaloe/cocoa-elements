@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="cocoa-card.html">
+<link rel="import" href="cocoa-ajax-yaml.html">
+<polymer-element name="cocoa-list" attributes="src type">
+  <template>
+    <cocoa-ajax-yaml
+      auto
+      url="{{src}}"
+      handleAs="{{type}}"></cocoa-ajax-yaml>
+    <template repeat="{{response}}" id="ajax-response">
+      <cocoa-card
+      name="{{name}}"
+      avatar="{{avatar}}"
+      url="{{url}}"
+      about="{{about}}"
+      detail="{{detail}}"
+      repo="{{repo}}"
+      author="{{author}}"
+      ></cocoa-card>
+    </template>
+
+  </template>
+    <script>
+      Polymer('cocoa-list',{
+        src:"",
+        type:"",
+        domReady: function(){
+          var _this = this;
+          var ajax = this.shadowRoot.querySelector("cocoa-ajax-yaml");
+          ajax.addEventListener("core-response",
+            function(e) {
+              _this.shadowRoot.querySelector('template#ajax-response').model = {
+                response: e.detail.response
+              };
+            }
+          );
+        }
+      });
+    </script>
+
+
+
+</polymer-element>
