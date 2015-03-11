@@ -23,5 +23,39 @@
     author="Himanoa"
   ></cocoa-card>
 
+  <h3>cocoa-ajax-yaml + cocoa-card</h3>
+  <cocoa-ajax-yaml
+    auto
+    url="../../data/cocoa.yaml"
+    handleAs="yaml"></cocoa-ajax-yaml>
+    <template repeat="{{response}}" id="ajax-response">
+      <cocoa-card
+      name="{{name}}"
+
+      avatar="{{avatar}}"
+      url="{{url}}"
+      about="{{about}}"
+      detail="{{detail}}"
+      repo="{{repo}}"
+      author="{{author}}"
+
+      ></cocoa-card>
+    </template>
+
+    <script>
+    document.addEventListener('polymer-ready', function() {
+      var ajax = document.querySelector("cocoa-ajax-yaml");
+      ajax.addEventListener("core-response",
+        function(e) {
+          document.querySelector('template#ajax-response').model = {
+            response: e.detail.response
+          };
+        }
+      );
+    });
+
+    </script>
+
+
 </body>
 </html>
